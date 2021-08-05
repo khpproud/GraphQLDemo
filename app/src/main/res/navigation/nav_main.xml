@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/characters_list_fragment">
+
+    <fragment
+        android:id="@+id/characters_list_fragment"
+        android:name="dev.patrick.graphqldemo.view.ui.CharactersListFragment"
+        android:label="List Of all characters"
+        tools:layout="@layout/fragment_characters_list">
+
+        <action
+            android:id="@+id/to_character_details_fragment"
+            app:destination="@id/character_details_fragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/character_details_fragment"
+        android:name="dev.patrick.graphqldemo.view.ui.CharacterDetailsFragment"
+        android:label="Character Details"
+        tools:layout="@layout/fragment_character_details">
+
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

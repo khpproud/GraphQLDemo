@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GraphQLDemo</string>
+    <string name="result_empty">Zero characters found</string>
+    <string name="not_found">No, character details found!</string>
+</resources>
